@@ -1,0 +1,8 @@
+<div class="row flex margin-bottom-30">
+    <div *ngFor="let node of nodes" class="node-container" [class.no-siblings]="nodes && nodes.length === 1">
+        <div class="node">
+            {{node.value}}
+        </div>
+        <app-tree *ngIf="node.children && node.children.length > 0" [nodes]="node.children"></app-tree>
+    </div>
+</div>
