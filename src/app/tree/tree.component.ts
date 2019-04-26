@@ -6,5 +6,5 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrls: ['./tree.component.styl']
 })
 export class TreeComponent {
-  @Input() nodes: any;
+  @Input() tree: Node;
 }

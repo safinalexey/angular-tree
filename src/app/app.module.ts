@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TreeComponent } from './tree/tree.component';
+import { SvgMagnifeicentTreeComponent } from './svg-magnifeicent-tree/svg-magnifeicent-tree.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TreeComponent
+    TreeComponent,
+    SvgMagnifeicentTreeComponent
   ],
   imports: [
     BrowserModule

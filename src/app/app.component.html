@@ -1,12 +1,8 @@
-<div class="tree margin-bottom-30">
-    <div class="center">
-        <div class="root row flex">
-            <div class="node-container">
-                <div class="node root">
-                    {{tree.value}}
-                </div>
-                <app-tree [nodes]="tree.children"></app-tree>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="container">-->
+<!--<app-tree [tree]="tree"></app-tree>-->
+<!--</div>-->
+
+<button (click)="addNode()">Add node</button>
+<svg style="width: 800px;height: 600px;">
+    <g style="transform: translate(400px , 100px)" app-svg-magnifeicent-tree [tree]="tree"></g>
+</svg>
