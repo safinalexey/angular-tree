@@ -1,0 +1,18 @@
+<svg:line *ngIf="tree.left" x1="0" y1="0" [attr.x2]="spacingLeft" y2="60"/>
+<svg:g *ngIf="tree.left"
+       [style.transform]="'translate('+spacingLeft+'px, 60px)'"
+       app-svg-magnifeicent-tree
+       [tree]="tree.left"
+></svg:g>
+
+
+<svg:line *ngIf="tree.right" x1="0" y1="0" [attr.x2]="spacingRight" y2="60"/>
+<svg:g
+    [style.transform]="'translate(' + spacingRight + 'px, 60px)'"
+    *ngIf="tree.right" app-svg-magnifeicent-tree [tree]="tree.right"></svg:g>
+
+
+<svg:circle fill="silver"
+            [attr.r]="nodeSize">{{tree.value}}lol
+</svg:circle>
+<svg:text xmlns:svg="http://www.w3.org/1999/html">{{tree.value}}</svg:text>

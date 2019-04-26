@@ -1,19 +1,17 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { insertBst, Node, treeFromArray } from './data-structures/tree';
 
+console.log(treeFromArray([100, 50, 150, 25, 75]))
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.styl']
 })
 export class AppComponent {
-    title = 'angular-tree';
+    tree =  treeFromArray([100, 50, 150, 25, 75]);
 
-    tree = {
-        id: 0,
-        value: '0',
-        children: [
-            {id: 1, value: 1, children: [{id: 3, value: 3}, {id: 4, value: 4}]},
-            {id: 2, value: 2, children: [{id: 5, value: 5}, {id: 6, value: 6}]}
-        ]
-    };
+    addNode() {
+        this.tree = insertBst(Math.round(Math.random() * 1000), this.tree);
+    }
 }
+

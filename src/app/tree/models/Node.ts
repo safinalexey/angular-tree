@@ -29,3 +29,6 @@ export function searchTree(element: Node, idToFind: number): Node {
     }
     return null;
 }
+
+
+new Node()
